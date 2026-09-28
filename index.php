@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Construction</title>
+<style>
+  :root {
+    --bg: #e7ecef;
+    --navy: #274c77;
+    --blue: #6096ba;
+    --light-blue: #a3cef1;
+    --gray: #8b8c89;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, var(--bg) 0%, var(--light-blue) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    text-align: center;
+    color: var(--navy);
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 32px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(39, 76, 119, 0.15);
+  }
+
+  .icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    display: inline-block;
+    animation: bounce 2.2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  h1 {
+    font-size: clamp(24px, 6vw, 34px);
+    color: var(--navy);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle {
+    font-size: clamp(14px, 4vw, 16px);
+    color: var(--blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: clamp(14px, 4vw, 16px);
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--blue);
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+
+  .dots span:nth-child(2) { animation-delay: 0.2s; background: var(--light-blue); }
+  .dots span:nth-child(3) { animation-delay: 0.4s; background: var(--navy); }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.4); opacity: 1; }
+  }
+
+  footer {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--gray);
+  }
+
+  @media (max-width: 380px) {
+    .card { padding: 36px 20px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">🚧</div>
+    <div class="subtitle">Under Construction</div>
+    <h1>Situs Sedang Dalam Perbaikan</h1>
+    <p>Waktu server: <?php echo date('d-m-Y H:i:s'); ?></p>
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <footer>&copy; <?php echo date('Y'); ?></footer>
+  </div>
+</body>
+</html>
